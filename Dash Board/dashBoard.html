@@ -1,0 +1,1179 @@
+<!DOCTYPE html>
+
+<!-- Use theme-dark To Theme Dark -->
+<html lang="en" class="">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width,
+               initial-scale=1.0,
+               maximum-scale=1.0,
+               minimum-scale=1.0,
+               user-scalable=no">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Use blur To blur Screen -->
+    <!-- Use noblur To delete blur Screen -->
+    <!-- Lodaing Page -->
+    <div class="loader ">
+        <div class="justify-content-center jimu-primary-loading"></div>
+    </div>
+    <!-- Delete Modal -->
+    <div class="delete-box-parent hidden">
+        <div class="logout-container answer-delete-product " id="answer-delete-product">
+            <p class="logout-container-title">Are you sure you want to Delete ?</p>
+            <div class="logout-container-btns">
+                <div class="logout-btn logout-no-btn no-delete-product" id="no-delete-product">
+                    <svg class="size-6 logout-btn-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                        fill="currentColor">
+                        <path fill-rule="evenodd"
+                            d="M5.47 5.47a.75.75 0 0 1 1.06 0L12 10.94l5.47-5.47a.75.75 0 1 1 1.06 1.06L13.06 12l5.47 5.47a.75.75 0 1 1-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 0 1-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 0 1 0-1.06Z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </div>
+                <div class="logout-btn logout-yes-btn ok-delete-product" id="ok-delete-product">
+                    <svg class="size-6 logout-btn-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                        fill="currentColor">
+                        <path fill-rule="evenodd"
+                            d="M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Log out Modal -->
+    <div class="logout-box-parent hidden">
+        <div class="logout-container logout-style-container">
+            <p class="logout-container-title">Are you sure you want to logout ?</p>
+            <div class="logout-container-btns">
+                <div class="logout-btn logout-no-btn goto-page-dashboard-btn">
+                    <svg class="size-6 logout-btn-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                        fill="currentColor">
+                        <path fill-rule="evenodd"
+                            d="M5.47 5.47a.75.75 0 0 1 1.06 0L12 10.94l5.47-5.47a.75.75 0 1 1 1.06 1.06L13.06 12l5.47 5.47a.75.75 0 1 1-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 0 1-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 0 1 0-1.06Z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </div>
+                <div class="logout-btn logout-yes-btn goto-page-login-btn">
+                    <svg class="size-6 logout-btn-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                        fill="currentColor">
+                        <path fill-rule="evenodd"
+                            d="M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Fillters Modal -->
+    <div class="fillters-box-parent hidden">
+        <div class="filters-container filters-container-products ">
+            <p class="filters-container-title">Filters</p>
+            <div class="filters">
+                <!-- Use search-nav__clicked class for active input -->
+                <div class="filter-box">
+                    <p class="filter-box-title filter-box-product-title">Price : <span>100,000,000</span></p>
+                    <input type="range" class="filter-input-range-box filter-input-range-box-product filter-input-box"
+                        step="1000000" max="350000000">
+                </div>
+                <div class="filter-box">
+                    <p class="filter-box-title">Brand :</p>
+                    <input type="text" class="filter-input-box filter-input-brand-box" placeholder="xample :Apple">
+                </div>
+                <div class="filter-box">
+                    <p class="filter-box-title">Ram :</p>
+                    <input type="number" class="filter-input-box filter-input-ram-box" placeholder="xample :4GB">
+                </div>
+                <div class="filter-box">
+                    <p class="filter-box-title">Memory :</p>
+                    <input type="number" class="filter-input-box filter-input-memory-box" placeholder="xample :128GB">
+                </div>
+                <div class="filter-box">
+                    <p class="filter-box-title">Camera :</p>
+                    <input type="number" class="filter-input-box filter-input-camera-box" placeholder="xample :48px">
+                </div>
+                <div class="filter-box">
+                    <p class="filter-box-title">Coloring :</p>
+                    <input type="text" class="filter-input-box filter-input-coloring-box" placeholder="xample :Black">
+                </div>
+            </div>
+            <button class="accept-filters-btn accept-filters-product-btn">
+                <svg class="size-6 accept-filters-btn-svg" xmlns="http://www.w3.org/2000/svg" fill="none"
+                    viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                </svg>
+            </button>
+        </div>
+    </div>
+    <!-- Edit Modal -->
+    <div class="edit-box-parent hidden">
+        <div class="edit-container edit-container-product " id="edit-container-product">
+            <div class="edit-product-container">
+                <!-- use To select to update -->
+                <h2 class="edit-product-modal-title products-create-header">Choose To Edit</h2>
+                <button class="edit-product-modal-btn edit-product-modal-product-btn"
+                    id="edit-product-modal-product-btn" value="mobileBrand">Brand</button>
+                <button class="edit-product-modal-btn edit-product-modal-product-btn"
+                    id="edit-product-modal-product-btn" value="mobileRam">Ram</button>
+                <button class="edit-product-modal-btn edit-product-modal-product-btn"
+                    id="edit-product-modal-product-btn" value="mobileMemory">Memory</button>
+                <button class="edit-product-modal-btn edit-product-modal-product-btn"
+                    id="edit-product-modal-product-btn" value="mobileCamera">Camera</button>
+                <button class="edit-product-modal-btn edit-product-modal-product-btn"
+                    id="edit-product-modal-product-btn" value="mobileColoring">Coloring</button>
+                <button class="edit-product-modal-btn edit-product-modal-product-btn"
+                    id="edit-product-modal-product-btn" value="mobileqty">qty</button>
+                <button class="edit-product-modal-btn edit-product-modal-product-btn"
+                    id="edit-product-modal-product-btn" value="mobilePrice">Price</button>
+                <!-- use To complate to update -->
+                <!-- <h2 class="edit-product-modal-title products-create-header">Complate :</h2>
+            <p class="edit-input-title">Brand :</p>
+            <input class="edit-input" type="text" placeholder="Enter New Brand ...">
+            <br>
+            <button class="edit-input-btn">
+                <svg class="size-6 edit-input-btn-svg" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                </svg>
+            </button> -->
+            </div>
+        </div>
+    </div>
+    <!-- Edit Input Modal -->
+    <div class="edit-input-parent hidden">
+        <div class="edit-product-box " id="edit-product-box">
+            <p class="edit-product-box-title" id="edit-product-box-title">Edit Brand</p>
+            <div class="edit-product-box-info" id="edit-product-box-info">
+                <p class="edit-product-box-label" id="edit-product-box-label">brand:</p>
+                <input class="edit-product-box-input" id="edit-product-box-input" type="text"
+                    placeholder="example : apple">
+            </div>
+            <div class="edit-product-box-btns">
+                <button class="no-delete-product product-box-no-btn logout-no-btn" id="product-box-no-btn">
+                    <svg class="size-6 logout-btn-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                        fill="currentColor">
+                        <path fill-rule="evenodd"
+                            d="M5.47 5.47a.75.75 0 0 1 1.06 0L12 10.94l5.47-5.47a.75.75 0 1 1 1.06 1.06L13.06 12l5.47 5.47a.75.75 0 1 1-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 0 1-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 0 1 0-1.06Z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </button>
+                <button class="ok-delete-product product-box-ok-btn logout-yes-btn" id="product-box-ok-btn">
+                    <svg class="size-6 logout-btn-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                        fill="currentColor">
+                        <path fill-rule="evenodd"
+                            d="M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container ">
+
+        <div class="toast-container toast-container-products ">
+            <!-- Use This Svg For Valid Value -->
+            <!-- <svg class="size-6 toast-valid-svg" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+        </svg> -->
+            <!-- Use This Svg For InValid Value -->
+            <!-- <svg class="size-6 toast-invalid-svg" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+            stroke-width="1.5" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round"
+                d="M12 9v3.75m9-.75a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 3.75h.008v.008H12v-.008Z" />
+        </svg> -->
+            <!-- Use toast-open-products for show toast ---- box toast box for products-->
+            <div class="toast-box-parent ">
+                <div class="toast-box toast-box-products ">
+                    <p class="toast-title toast-title-products">Please enter a valid email.</p>
+                    <div class="toast-svg-box toast-svg-box-products">
+                        <svg class="size-6 toast-invalid-svg" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M12 9v3.75m9-.75a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 3.75h.008v.008H12v-.008Z" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Use toast-open for show toast box -->
+        <div class="toast-container toast-container-profile hidden">
+            <!-- Use This Svg For Valid Value -->
+            <!-- <svg class="size-6 toast-valid-svg" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+        </svg> -->
+            <!-- Use This Svg For InValid Value -->
+            <!-- <svg class="size-6 toast-invalid-svg" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+            stroke-width="1.5" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round"
+                d="M12 9v3.75m9-.75a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 3.75h.008v.008H12v-.008Z" />
+        </svg> -->
+            <div class="toast-box">
+                <p class="toast-title toast-title-profile">Please enter a valid email.</p>
+                <div class="toast-svg-box-profile">
+                    <svg class="size-6 toast-invalid-svg" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M12 9v3.75m9-.75a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 3.75h.008v.008H12v-.008Z" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal For Delete -->
+
+
+
+        <!-- Nav In Page -->
+        <nav class="nav">
+            <div class="left-nav">
+                <div class="logo-container">
+                    <img class="logo" src="Images/Google__G__Logo 1.svg" alt="Logo">
+                    <p class="name-logo">DashBoard</p>
+                </div>
+                <!-- use panel-btn__close to panel btn style close -->
+                <span class="panel-btn "></span>
+            </div>
+            <div class="middle-nav">
+                <!-- use search-nav__clicked to clicked input-->
+                <div class="clean-input-search " id="btnClear">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="size-6 clean-input-search-svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                    </svg>
+                </div>
+                <input class="search-nav" id="searchInput" type="text" placeholder="Search">
+                <svg class="size-6 Search-nav__btn" id="btnSearch" xmlns="http://www.w3.org/2000/svg" fill="none"
+                    viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                </svg>
+            </div>
+            <div class="right-nav">
+                <!-- Use nav-message-btn-err to avalble message -->
+                <div class="nav-message-btn ">
+                    <svg class="size-6 nav-message" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                        fill="currentColor">
+                        <path fill-rule="evenodd"
+                            d="M5.25 9a6.75 6.75 0 0 1 13.5 0v.75c0 2.123.8 4.057 2.118 5.52a.75.75 0 0 1-.297 1.206c-1.544.57-3.16.99-4.831 1.243a3.75 3.75 0 1 1-7.48 0 24.585 24.585 0 0 1-4.831-1.244.75.75 0 0 1-.298-1.205A8.217 8.217 0 0 0 5.25 9.75V9Zm4.502 8.9a2.25 2.25 0 1 0 4.496 0 25.057 25.057 0 0 1-4.496 0Z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </div>
+
+                <div class="nav-theme-btn">
+                    <svg class="size-6 nav-theme" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                        fill="currentColor">
+                        <path fill-rule="evenodd"
+                            d="M9.528 1.718a.75.75 0 0 1 .162.819A8.97 8.97 0 0 0 9 6a9 9 0 0 0 9 9 8.97 8.97 0 0 0 3.463-.69.75.75 0 0 1 .981.98 10.503 10.503 0 0 1-9.694 6.46c-5.799 0-10.5-4.7-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 0 1 .818.162Z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </div>
+                <!-- Use 
+                        <svg class="size-6 nav-user__img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                            fill="currentColor">
+                            <path fill-rule="evenodd"
+                                d="M7.5 6a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM3.751 20.105a8.25 8.25 0 0 1 16.498 0 .75.75 0 0 1-.437.695A18.683 18.683 0 0 1 12 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 0 1-.437-.695Z"
+                                clip-rule="evenodd" />
+                        </svg> 
+                        If user dont have profile image-->
+                <div class="nav-user__container">
+                    <button class="nav-user">
+                        <svg class="size-6 nav-user__img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                            fill="currentColor">
+                            <path fill-rule="evenodd"
+                                d="M7.5 6a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM3.751 20.105a8.25 8.25 0 0 1 16.498 0 .75.75 0 0 1-.437.695A18.683 18.683 0 0 1 12 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 0 1-.437-.695Z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </button>
+                    <p class="nav-user__name">
+                        Amir
+                    </p>
+                </div>
+            </div>
+        </nav>
+
+
+        <!-- For DashBoard Page -->
+        <div class="dashboard-page ">
+            <main class="main">
+                <div class="main-info">
+                    <div class="meain-info__box">
+                        <div class="icon-box">
+                            <img class="info-icon" src="Images/icon1.svg" alt="icon1">
+                        </div>
+                        <div class="text-box">
+                            <p class="info-title">Dapartment</p>
+                            <p class="info-number" id="dapartment-info">Empty</p>
+                        </div>
+                    </div>
+                    <div class="meain-info__box">
+                        <div class="icon-box">
+                            <img class="info-icon dolor" src="Images/icon2.svg" alt="icon1">
+                        </div>
+                        <div class="text-box">
+                            <p class="info-title">Total salary</p>
+                            <p class="info-number" id="salary-info">Empty</p>
+                        </div>
+                    </div>
+                    <div class="meain-info__box">
+                        <div class="icon-box">
+                            <svg class="size-6 info-icon" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M12 3v17.25m0 0c-1.472 0-2.882.265-4.185.75M12 20.25c1.472 0 2.882.265 4.185.75M18.75 4.97A48.416 48.416 0 0 0 12 4.5c-2.291 0-4.545.16-6.75.47m13.5 0c1.01.143 2.01.317 3 .52m-3-.52 2.62 10.726c.122.499-.106 1.028-.589 1.202a5.988 5.988 0 0 1-2.031.352 5.988 5.988 0 0 1-2.031-.352c-.483-.174-.711-.703-.59-1.202L18.75 4.971Zm-16.5.52c.99-.203 1.99-.377 3-.52m0 0 2.62 10.726c.122.499-.106 1.028-.589 1.202a5.989 5.989 0 0 1-2.031.352 5.989 5.989 0 0 1-2.031-.352c-.483-.174-.711-.703-.59-1.202L5.25 4.971Z" />
+                            </svg>
+                        </div>
+                        <div class="text-box">
+                            <p class="info-title">History</p>
+                            <p class="info-number" id="history-info">Empty</p>
+                        </div>
+                    </div>
+                    <div class="meain-info__box">
+                        <div class="icon-box">
+                            <svg class="size-6 info-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                fill="currentColor">
+                                <path
+                                    d="M4.5 6.375a4.125 4.125 0 1 1 8.25 0 4.125 4.125 0 0 1-8.25 0ZM14.25 8.625a3.375 3.375 0 1 1 6.75 0 3.375 3.375 0 0 1-6.75 0ZM1.5 19.125a7.125 7.125 0 0 1 14.25 0v.003l-.001.119a.75.75 0 0 1-.363.63 13.067 13.067 0 0 1-6.761 1.873c-2.472 0-4.786-.684-6.76-1.873a.75.75 0 0 1-.364-.63l-.001-.122ZM17.25 19.128l-.001.144a2.25 2.25 0 0 1-.233.96 10.088 10.088 0 0 0 5.06-1.01.75.75 0 0 0 .42-.643 4.875 4.875 0 0 0-6.957-4.611 8.586 8.586 0 0 1 1.71 5.157v.003Z" />
+                            </svg>
+                        </div>
+                        <div class="text-box">
+                            <p class="info-title">Language</p>
+                            <p class="info-number" id="language-info">Empty</p>
+                        </div>
+                    </div>
+                    <div class="meain-info__box">
+                        <div class="icon-box">
+                            <svg class="size-6 info-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                fill="currentColor">
+                                <path
+                                    d="M2.273 5.625A4.483 4.483 0 0 1 5.25 4.5h13.5c1.141 0 2.183.425 2.977 1.125A3 3 0 0 0 18.75 3H5.25a3 3 0 0 0-2.977 2.625ZM2.273 8.625A4.483 4.483 0 0 1 5.25 7.5h13.5c1.141 0 2.183.425 2.977 1.125A3 3 0 0 0 18.75 6H5.25a3 3 0 0 0-2.977 2.625ZM5.25 9a3 3 0 0 0-3 3v6a3 3 0 0 0 3 3h13.5a3 3 0 0 0 3-3v-6a3 3 0 0 0-3-3H15a.75.75 0 0 0-.75.75 2.25 2.25 0 0 1-4.5 0A.75.75 0 0 0 9 9H5.25Z" />
+                            </svg>
+                        </div>
+                        <div class="text-box">
+                            <p class="info-title">Total Products</p>
+                            <p class="info-number" id="products-info">Empty</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-middle">
+                    <div class="dashboard-main">
+                        <div class="user-profile">
+                            <img class="background-user" src="Images/background-user.svg" alt="background-user">
+                            <img class="image-user" src="Images/ronaldo.jpg" alt="ronaldo">
+                            <p class="name-user">Cristian Ronaldo</p>
+                            <p class="job-user">Footbalist</p>
+                            <div class="info-box">
+                                <div class="item-box">
+                                    <p class="item-number number-of-posts">65</p>
+                                    <p class="item-title">Repositories</p>
+                                </div>
+                                <div class="item-box">
+                                    <p class="item-number number-of-folowers">1765</p>
+                                    <p class="item-title">Folowers</p>
+                                </div>
+                                <div class="item-box">
+                                    <p class="item-number number-of-folowing">17056</p>
+                                    <p class="item-title">Folowing</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="last-products-box">
+                        <p class="last-products-box__title">Last Products</p>
+                        <p class="last-products-box__caption">
+                            Here you can find more details about your projects. Keep you user engaged by providing
+                            meaningful
+                            information.
+                        </p>
+                        <p class="noavailble-last-products">No Available Products</p>
+                        <div class="box-for-last-products">
+
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <footer class="footer">
+                <div class="general-container">
+                    <p class="general-container__title">General Information</p>
+                    <p class="general-container__caption">
+                        As we live, our hearts turn colder. Cause pain is what we go through as we become older. We get
+                        insulted by others, lose trust for those others. We get back stabbed by friends. It becomes
+                        harder
+                        for us to give others a hand. We get our heart broken by people we love, even that we give them
+                        all...
+                    </p>
+                    <div class="general-boxs">
+                        <div class="general-box">
+                            <p class="general-box__title">Education</p>
+                            <p class="general-box__caption">Empty</p>
+                        </div>
+                        <div class="general-box">
+                            <p class="general-box__title">Languages</p>
+                            <p class="general-box__caption" id="general-box__caption-language">Empty</p>
+                        </div>
+                        <div class="general-box">
+                            <p class="general-box__title">Department</p>
+                            <p class="general-box__caption" id="general-box__caption-department">Empty</p>
+                        </div>
+                        <div class="general-box">
+                            <p class="general-box__title">Work History</p>
+                            <p class="general-box__caption" id="general-box__caption-workhistory">Empty</p>
+                        </div>
+                        <div class="general-box">
+                            <p class="general-box__title">National code</p>
+                            <p class="general-box__caption" id="general-box__caption-nationalcode">Empty</p>
+                        </div>
+                        <div class="general-box">
+                            <p class="general-box__title">Age</p>
+                            <p class="general-box__caption" id="general-box__caption-age">Empty</p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+
+
+        <!-- For Profile Page -->
+        <div class="profile-page hidden">
+            <!-- Use For Not Ok Profile -->
+            <!-- <svg class="size-6 profile-email-box__notoksvg profile-email-box-status" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                        stroke-width="3" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                </svg> -->
+            <!-- Use For Ok Profile -->
+            <!-- <svg class="size-6 profile-email-box__oksvg profile-email-box-status" xmlns="http://www.w3.org/2000/svg" fill="none"
+                viewBox="0 0 24 24" stroke-width="3" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+            </svg> -->
+            <!-- Use profile-email-box__oksvg To Ok Profile And Color Blue -->
+            <!-- Use profile-email-box__notoksvg To Not Ok Profile And Color Red -->
+
+            <!-- Email box -->
+            <div class="profile-email-box">
+                <div class="box-shimmer-svg box-shimmer-svg-loading">
+                    <div class="profile-email-box__oksvg profile-email-box-status" id="profile-email-box-svg">
+                        <svg class="size-6 profile-email-box__oksvg" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24" stroke-width="3" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                    </div>
+                </div>
+                <div class="box-shimmer-title box-shimmer-title-loading">
+                    <p class="profile-email-box-email-title" id="profile-email-box-title">
+                        <span class="profile-email-box-email-title-first">Your Email</span> : <span
+                            id="profile-email-box-loading">loading</span>
+                    </p>
+                </div>
+                <p class="profile-email-box-change-email-title disable" id="profile-change-email-box-title">
+                    New Email :
+                </p>
+                <input type="text" id="profile-change-email-box-input" class="profile-email-box-change-input disable"
+                    placeholder="example@gmail.com">
+                <br>
+                <svg data-value="email" class="size-6 profile-email-box-change__svg" id="profile-change-email-box__svg"
+                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M21.731 2.269a2.625 2.625 0 0 0-3.712 0l-1.157 1.157 3.712 3.712 1.157-1.157a2.625 2.625 0 0 0 0-3.712ZM19.513 8.199l-3.712-3.712-12.15 12.15a5.25 5.25 0 0 0-1.32 2.214l-.8 2.685a.75.75 0 0 0 .933.933l2.685-.8a5.25 5.25 0 0 0 2.214-1.32L19.513 8.2Z" />
+                </svg>
+                <button class="profile-email-box-change-btn disable" id="profile-change-email-box-btn">Change</button>
+            </div>
+            <!-- Password box -->
+            <div class="profile-email-box">
+                <div class="box-shimmer-svg box-shimmer-svg-loading">
+                    <div class="profile-email-box__oksvg profile-email-box-status" id="profile-password-box-svg">
+                        <svg class="size-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke-width="3" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                    </div>
+                </div>
+                <div class="box-shimmer-title box-shimmer-title-loading">
+                    <p class="profile-email-box-email-title" id="profile-password-box-title">
+                        <span class="profile-email-box-email-title-first">Your Password</span> : <span
+                            id="profile-password-box-loading">loading</span>
+                    </p>
+                </div>
+                <p class="profile-email-box-change-email-title disable" id="profile-change-password-box-title">
+                    New Password :
+                </p>
+                <input type="text" id="profile-change-password-box-input" class="profile-email-box-change-input disable"
+                    placeholder="example : Amir.1234">
+                <input type="text" id="profile-change-repassword-box-input"
+                    class="profile-email-box-change-input disable" placeholder="repeat Password">
+                <br>
+                <svg data-value="password" id="profile-change-password-box__svg"
+                    class="size-6 profile-email-box-change__svg disal" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M21.731 2.269a2.625 2.625 0 0 0-3.712 0l-1.157 1.157 3.712 3.712 1.157-1.157a2.625 2.625 0 0 0 0-3.712ZM19.513 8.199l-3.712-3.712-12.15 12.15a5.25 5.25 0 0 0-1.32 2.214l-.8 2.685a.75.75 0 0 0 .933.933l2.685-.8a5.25 5.25 0 0 0 2.214-1.32L19.513 8.2Z" />
+                </svg>
+                <button class="profile-email-box-change-btn disable"
+                    id="profile-change-password-box-btn">Change</button>
+            </div>
+            <!-- Name box  -->
+            <div class="profile-email-box">
+                <div class="box-shimmer-svg box-shimmer-svg-loading">
+                    <div class="profile-email-box__notoksvg profile-email-box-status" id="profile-name-box-svg">
+                        <svg class="size-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke-width="3" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="box-shimmer-title box-shimmer-title-loading">
+                    <p class="profile-email-box-email-title" id="profile-name-box-title">
+                        <span class="profile-email-box-email-title-first">Your Name</span> : <span
+                            id="profile-name-box-loading">loading</span>
+                    </p>
+                </div>
+                <p class="profile-email-box-change-email-title disable" id="profile-change-name-box-title">
+                    New Name :
+                </p>
+                <input type="text" id="profile-change-name-box-input" class="profile-email-box-change-input disable"
+                    placeholder="example : Amir">
+                <br>
+                <svg data-value="name" id="profile-change-name-box__svg" class="size-6 profile-email-box-change__svg"
+                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M21.731 2.269a2.625 2.625 0 0 0-3.712 0l-1.157 1.157 3.712 3.712 1.157-1.157a2.625 2.625 0 0 0 0-3.712ZM19.513 8.199l-3.712-3.712-12.15 12.15a5.25 5.25 0 0 0-1.32 2.214l-.8 2.685a.75.75 0 0 0 .933.933l2.685-.8a5.25 5.25 0 0 0 2.214-1.32L19.513 8.2Z" />
+                </svg>
+                <button id="profile-change-name-box-btn" class="profile-email-box-change-btn disable">Change</button>
+            </div>
+            <!-- Languages box  -->
+            <div class="profile-email-box">
+                <div class="box-shimmer-svg box-shimmer-svg-loading">
+                    <div class="profile-email-box__oksvg profile-email-box-status" id="profile-Language-box-svg">
+                        <svg class="size-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke-width="3" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                    </div>
+                </div>
+                <div class="box-shimmer-title box-shimmer-title-loading">
+                    <p class="profile-email-box-email-title" id="profile-Language-box-title">
+                        <span class="profile-email-box-email-title-first">Your Language</span> : <span
+                            id="profile-language-box-loading">loading</span>
+                    </p>
+                </div>
+                <p class="profile-email-box-change-email-title disable" id="profile-change-Language-box-title">
+                    New Language :
+                </p>
+                <input type="text" id="profile-change-Language-box-input" class="profile-email-box-change-input disable"
+                    placeholder="example : English">
+                <br>
+                <svg id="profile-change-Language-box__svg" class="size-6 profile-email-box-change__svg"
+                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M21.731 2.269a2.625 2.625 0 0 0-3.712 0l-1.157 1.157 3.712 3.712 1.157-1.157a2.625 2.625 0 0 0 0-3.712ZM19.513 8.199l-3.712-3.712-12.15 12.15a5.25 5.25 0 0 0-1.32 2.214l-.8 2.685a.75.75 0 0 0 .933.933l2.685-.8a5.25 5.25 0 0 0 2.214-1.32L19.513 8.2Z" />
+                </svg>
+                <button data-value="language" id="profile-change-Language-box-btn"
+                    class="profile-email-box-change-btn disable">Change</button>
+            </div>
+            <!-- Department box  -->
+            <div class="profile-email-box">
+                <div class="box-shimmer-svg box-shimmer-svg-loading">
+                    <div class="profile-email-box__oksvg profile-email-box-status" id="profile-department-box-svg">
+                        <svg class="size-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke-width="3" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                    </div>
+                </div>
+                <div class="box-shimmer-title box-shimmer-title-loading">
+                    <p class="profile-email-box-email-title" id="profile-department-box-title">
+                        <span class="profile-email-box-email-title-first">Your Department</span> : <span
+                            id="profile-department-box-loading">loading</span>
+                    </p>
+                </div>
+                <p class="profile-email-box-change-email-title disable" id="profile-change-department-box-title">
+                    New Department :
+                </p>
+                <input type="text" id="profile-change-department-box-input"
+                    class="profile-email-box-change-input disable" placeholder="example : designer">
+                <br>
+                <svg data-value="department" id="profile-change-department-box__svg"
+                    class="size-6 profile-email-box-change__svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                    fill="currentColor">
+                    <path
+                        d="M21.731 2.269a2.625 2.625 0 0 0-3.712 0l-1.157 1.157 3.712 3.712 1.157-1.157a2.625 2.625 0 0 0 0-3.712ZM19.513 8.199l-3.712-3.712-12.15 12.15a5.25 5.25 0 0 0-1.32 2.214l-.8 2.685a.75.75 0 0 0 .933.933l2.685-.8a5.25 5.25 0 0 0 2.214-1.32L19.513 8.2Z" />
+                </svg>
+                <button id="profile-change-department-box-btn"
+                    class="profile-email-box-change-btn disable">Change</button>
+            </div>
+            <!-- Work History box  -->
+            <div class="profile-email-box">
+                <div class="box-shimmer-svg box-shimmer-svg-loading">
+                    <div class="profile-email-box__oksvg profile-email-box-status" id="profile-history-box-svg">
+                        <svg class="size-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke-width="3" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                    </div>
+                </div>
+                <div class="box-shimmer-title box-shimmer-title-loading">
+                    <p class="profile-email-box-email-title" id="profile-history-box-title">
+                        <span class="profile-email-box-email-title-first">Your Work History</span> : <span
+                            id="profile-history-box-loading">loading</span>
+                    </p>
+                </div>
+                <p class="profile-email-box-change-email-title disable" id="profile-change-history-box-title">
+                    New Work History :
+                </p>
+                <input type="text" id="profile-change-history-box-input" class="profile-email-box-change-input disable"
+                    placeholder="example : google">
+                <br>
+                <svg data-value="history" id="profile-change-history-box__svg"
+                    class="size-6 profile-email-box-change__svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                    fill="currentColor">
+                    <path
+                        d="M21.731 2.269a2.625 2.625 0 0 0-3.712 0l-1.157 1.157 3.712 3.712 1.157-1.157a2.625 2.625 0 0 0 0-3.712ZM19.513 8.199l-3.712-3.712-12.15 12.15a5.25 5.25 0 0 0-1.32 2.214l-.8 2.685a.75.75 0 0 0 .933.933l2.685-.8a5.25 5.25 0 0 0 2.214-1.32L19.513 8.2Z" />
+                </svg>
+                <button id="profile-change-history-box-btn" class="profile-email-box-change-btn disable">Change</button>
+            </div>
+            <!-- National Code box  -->
+            <div class="profile-email-box national-box-end">
+                <div class="box-shimmer-svg box-shimmer-svg-loading">
+                    <div class="profile-email-box__oksvg profile-email-box-status" id="profile-national-box-svg">
+                        <svg class="size-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke-width="3" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                    </div>
+                </div>
+                <div class="box-shimmer-title box-shimmer-title-loading">
+                    <p class="profile-email-box-email-title" id="profile-national-box-title">
+                        <span class="profile-email-box-email-title-first">Your National Code</span> : <span
+                            id="profile-national-box-loading">loading</span>
+                    </p>
+                </div>
+                <p class="profile-email-box-change-email-title disable" id="profile-change-national-box-title">
+                    New National Code :
+                </p>
+                <input type="number" id="profile-change-national-box-input"
+                    class="profile-email-box-change-input disable" placeholder="example : 0123456789">
+                <br>
+                <svg data-value="national" id="profile-change-national-box__svg"
+                    class="size-6 profile-email-box-change__svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                    fill="currentColor">
+                    <path
+                        d="M21.731 2.269a2.625 2.625 0 0 0-3.712 0l-1.157 1.157 3.712 3.712 1.157-1.157a2.625 2.625 0 0 0 0-3.712ZM19.513 8.199l-3.712-3.712-12.15 12.15a5.25 5.25 0 0 0-1.32 2.214l-.8 2.685a.75.75 0 0 0 .933.933l2.685-.8a5.25 5.25 0 0 0 2.214-1.32L19.513 8.2Z" />
+                </svg>
+                <button id="profile-change-national-box-btn"
+                    class="profile-email-box-change-btn disable">Change</button>
+            </div>
+            <!-- Birthday box  -->
+            <div class="profile-email-box birthday-box-end">
+                <div class="box-shimmer-svg box-shimmer-svg-loading">
+                    <div class="profile-email-box__oksvg profile-email-box-status" id="profile-birthday-box-svg">
+                        <svg class="size-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke-width="3" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                    </div>
+                </div>
+                <div class="box-shimmer-title box-shimmer-title-loading">
+                    <p class="profile-email-box-email-title" id="profile-birthday-box-title">
+                        <span class="profile-email-box-email-title-first">Your Age</span> : <span
+                            id="profile-birthday-box-loading">loading</span>
+                    </p>
+                </div>
+                <p class="profile-email-box-change-email-title disable" id="profile-change-birthday-box-title">
+                    New Age :
+                </p>
+                <input type="number" id="profile-change-birthday-box-input"
+                    class="profile-email-box-change-input disable" placeholder="example : 22">
+                <br>
+                <svg data-value="birthday" id="profile-change-birthday-box__svg"
+                    class="size-6 profile-email-box-change__svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                    fill="currentColor">
+                    <path
+                        d="M21.731 2.269a2.625 2.625 0 0 0-3.712 0l-1.157 1.157 3.712 3.712 1.157-1.157a2.625 2.625 0 0 0 0-3.712ZM19.513 8.199l-3.712-3.712-12.15 12.15a5.25 5.25 0 0 0-1.32 2.214l-.8 2.685a.75.75 0 0 0 .933.933l2.685-.8a5.25 5.25 0 0 0 2.214-1.32L19.513 8.2Z" />
+                </svg>
+                <button id="profile-change-birthday-box-btn"
+                    class="profile-email-box-change-btn disable">Change</button>
+            </div>
+        </div>
+
+
+        <!-- For Porducts Page -->
+        <div class="porducts-page hidden">
+            <div id="create-porducts-page" class="create-porducts-page ">
+                <!-- Use create-porducts-page-open for open create product -->
+                <h2 class="products-create-header">Create Product</h2>
+                <!-- Use <svg class="size-6 open-create-inputs-svg" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" /></svg>
+                    to clsoe -->
+                <!-- Use <svg class="size-6 open-create-inputs-svg" xmlns="http://www.w3.org/2000/svg" fill="none"viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" /></svg> 
+                 to open -->
+                <!-- Use close-create-inputs to style btn -->
+                <button class="open-create-inputs " id="open-create-inputs">
+                    <!-- <svg class="size-6 open-create-inputs-svg" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                    </svg> -->
+                </button>
+                <!-- Use input-select class for focus on input -->
+                <!-- Use create-box-open to open create box -->
+                <div id="porducts-create-box" class="porducts-create-box">
+
+                    <div class="create-container">
+                        <p class="create-container-title">Enter Mobile Brand :</p>
+                        <input type="text" id="create-product-input-brand" class="create-container-input"
+                            placeholder="example : samsung">
+                    </div>
+                    <div class="create-container">
+                        <p class="create-container-title">Enter Mobile Ram :</p>
+                        <input type="number" id="create-product-input-ram" class="create-container-input"
+                            placeholder="example : 8">
+                    </div>
+                    <div class="create-container">
+                        <p class="create-container-title">Enter Mobile Memory :</p>
+                        <input type="number" id="create-product-input-memory" class="create-container-input"
+                            placeholder="example : 128">
+                    </div>
+                    <div class="create-container">
+                        <p class="create-container-title">Enter Mobile Camera :</p>
+                        <input type="number" id="create-product-input-camera" class="create-container-input"
+                            placeholder="example : 108">
+                    </div>
+                    <div class="create-container">
+                        <p class="create-container-title">Enter Mobile Coloring :</p>
+                        <input type="text" id="create-product-input-coloring" class="create-container-input"
+                            placeholder="example : black.">
+                    </div>
+                    <div class="create-container">
+                        <p class="create-container-title">Enter Mobile Price :</p>
+                        <input type="number" id="create-product-input-price" class="create-container-input"
+                            placeholder="example : 1,000,000">
+                    </div>
+                    <div class="create-container">
+                        <p class="create-container-title">Enter Product qty :</p>
+                        <input type="number" id="create-product-input-qty" class="create-container-input"
+                            placeholder="example : 29">
+                    </div>
+                    <!-- Use .select-box-open class for open select box -->
+                    <div class="create-container">
+                        <p class="create-container-title">Choose Product Category :</p>
+                        <button id="create-box-select" class="create-box-select"><span
+                                id="create-box-select-title">example : normal</span>
+                            <svg class="size-6 select-box-svg" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M19.5 13.5 12 21m0 0-7.5-7.5M12 21V3" />
+                            </svg>
+                        </button>
+                        <!-- use select-box-open to open category box -->
+                        <div class="select-box " id="select-box">
+                            <button class="select-box-item select-box-item-normal" id="select-box-item-normal"
+                                value="Normal">Normal</button>
+                            <button class="select-box-item select-box-item-important" id="select-box-item-important"
+                                value="Important">Important</button>
+                            <button class="select-box-item select-box-item-Notimportant"
+                                id="select-box-item-Notimportant" value="Not Important">Not
+                                Important</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Use porducts-create-box-btns-open to open create btn box -->
+                <div id="porducts-create-box-btns" class="porducts-create-box-btns">
+                    <button id="create-product-btn" class="create-product-btn create-product-btn-product">
+                        <svg class="size-6 create-product-btn-svg" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="avalable-products ">
+                <h2 class="products-create-header">Products</h2>
+                <div id="products-container-product" class="products-container ">
+                    <div class="product-box" id="product-box-products">
+                        <div class="product-box-img product-box-img-loading"></div>
+                        <div class="product-box-top">
+                            <p class="product-box-brand product-title-font product-box-brand-loading">Mobile Brand :
+                                <span class="product-caption-font product-box-brand-span">samsung</span>
+                            </p>
+                            <div class="product-box-edit-btn">
+                                <svg class="size-6 edit-btn-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                    fill="currentColor">
+                                    <path
+                                        d="M21.731 2.269a2.625 2.625 0 0 0-3.712 0l-1.157 1.157 3.712 3.712 1.157-1.157a2.625 2.625 0 0 0 0-3.712ZM19.513 8.199l-3.712-3.712-12.15 12.15a5.25 5.25 0 0 0-1.32 2.214l-.8 2.685a.75.75 0 0 0 .933.933l2.685-.8a5.25 5.25 0 0 0 2.214-1.32L19.513 8.2Z">
+                                    </path>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="product-box-item">
+                            <p class=" product-box-brand product-box-ram product-title-font product-box-brand-loading">
+                                Mobile Ram : <span class="product-caption-font product-box-brand-span ">12
+                                    GB</span>
+                            </p>
+                        </div>
+
+                        <div class="product-box-item">
+                            <p class=" product-box-brand product-box-memory product-title-font
+                                product-box-brand-loading">
+                                Mobile Memory : <span class="product-caption-font product-box-brand-span ">512 GB</span>
+                            </p>
+                        </div>
+                        <div class="product-box-item">
+                            <p
+                                class=" product-box-brand product-box-camera product-title-font product-box-brand-loading">
+                                Mobile Camera : <span class="product-caption-font product-box-brand-span ">120 mega
+                                    px</span>
+                            </p>
+                        </div>
+                        <div class="product-box-item">
+                            <p
+                                class=" product-box-brand product-box-coloring product-title-font product-box-brand-loading">
+                                Mobile Coloring : <span class="product-caption-font product-box-brand-span ">120 mega
+                                    px</span>
+                            </p>
+                        </div>
+
+                        <div class="product-box-item">
+                            <p class="product-box-brand product-box-qty product-title-font product-box-brand-loading">
+                                Mobile qty : <span class="product-caption-font product-box-brand-span">10</span>
+                            </p>
+                        </div>
+
+                        <div class="product-box-bottom">
+                            <p
+                                class="product-box-brand product-box-category product-title-font product-box-brand-loading-bottom product-box-brand-loading">
+                                Category :
+                                <span class="product-caption-font product-box-brand-span">Important</span>
+                            </p>
+                            <p
+                                class=" product-box-brand product-box-price product-title-font product-box-brand-loading-bottom product-box-brand-loading">
+                                Price : <span class="product-caption-font product-box-brand-span">$10</span></p>
+                        </div>
+                        <btn class="product-box-delete product-box-brand-loading-trash product-box-brand-loading">
+                            <svg class="size-6 product-box-delete-svg" style="display: none;"
+                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="m14.74 9-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 0 1-2.244 2.077H8.084a2.25 2.25 0 0 1-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 0 0-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 0 1 3.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 0 0-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 0 0-7.5 0" />
+                            </svg>
+                        </btn>
+                    </div>
+                    <div class="product-box" id="product-box-products">
+                        <div class="product-box-img product-box-img-loading"></div>
+                        <div class="product-box-top">
+                            <p class="product-box-brand product-title-font product-box-brand-loading">Mobile Brand :
+                                <span class="product-caption-font product-box-brand-span">samsung</span>
+                            </p>
+                            <div class="product-box-edit-btn">
+                                <svg class="size-6 edit-btn-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                    fill="currentColor">
+                                    <path
+                                        d="M21.731 2.269a2.625 2.625 0 0 0-3.712 0l-1.157 1.157 3.712 3.712 1.157-1.157a2.625 2.625 0 0 0 0-3.712ZM19.513 8.199l-3.712-3.712-12.15 12.15a5.25 5.25 0 0 0-1.32 2.214l-.8 2.685a.75.75 0 0 0 .933.933l2.685-.8a5.25 5.25 0 0 0 2.214-1.32L19.513 8.2Z">
+                                    </path>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="product-box-item">
+                            <p class=" product-box-brand product-box-ram product-title-font product-box-brand-loading">
+                                Mobile Ram : <span class="product-caption-font product-box-brand-span ">12
+                                    GB</span>
+                            </p>
+                        </div>
+
+                        <div class="product-box-item">
+                            <p class=" product-box-brand product-box-memory product-title-font
+                                product-box-brand-loading">
+                                Mobile Memory : <span class="product-caption-font product-box-brand-span ">512 GB</span>
+                            </p>
+                        </div>
+                        <div class="product-box-item">
+                            <p
+                                class=" product-box-brand product-box-camera product-title-font product-box-brand-loading">
+                                Mobile Camera : <span class="product-caption-font product-box-brand-span ">120 mega
+                                    px</span>
+                            </p>
+                        </div>
+                        <div class="product-box-item">
+                            <p
+                                class=" product-box-brand product-box-coloring product-title-font product-box-brand-loading">
+                                Mobile Coloring : <span class="product-caption-font product-box-brand-span ">120 mega
+                                    px</span>
+                            </p>
+                        </div>
+
+                        <div class="product-box-item">
+                            <p class="product-box-brand product-box-qty product-title-font product-box-brand-loading">
+                                Mobile qty : <span class="product-caption-font product-box-brand-span">10</span>
+                            </p>
+                        </div>
+
+                        <div class="product-box-bottom">
+                            <p
+                                class="product-box-brand product-box-category product-title-font product-box-brand-loading-bottom product-box-brand-loading">
+                                Category :
+                                <span class="product-caption-font product-box-brand-span">Important</span>
+                            </p>
+                            <p
+                                class=" product-box-brand product-box-price product-title-font product-box-brand-loading-bottom product-box-brand-loading">
+                                Price : <span class="product-caption-font product-box-brand-span">$10</span></p>
+                        </div>
+                        <btn class="product-box-delete product-box-brand-loading-trash product-box-brand-loading">
+                            <svg class="size-6 product-box-delete-svg" style="display: none;"
+                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="m14.74 9-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 0 1-2.244 2.077H8.084a2.25 2.25 0 0 1-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 0 0-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 0 1 3.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 0 0-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 0 0-7.5 0" />
+                            </svg>
+                        </btn>
+                    </div>
+                    <div class="product-box" id="product-box-products">
+                        <div class="product-box-img product-box-img-loading"></div>
+                        <div class="product-box-top">
+                            <p class="product-box-brand product-title-font product-box-brand-loading">Mobile Brand :
+                                <span class="product-caption-font product-box-brand-span">samsung</span>
+                            </p>
+                            <div class="product-box-edit-btn">
+                                <svg class="size-6 edit-btn-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                    fill="currentColor">
+                                    <path
+                                        d="M21.731 2.269a2.625 2.625 0 0 0-3.712 0l-1.157 1.157 3.712 3.712 1.157-1.157a2.625 2.625 0 0 0 0-3.712ZM19.513 8.199l-3.712-3.712-12.15 12.15a5.25 5.25 0 0 0-1.32 2.214l-.8 2.685a.75.75 0 0 0 .933.933l2.685-.8a5.25 5.25 0 0 0 2.214-1.32L19.513 8.2Z">
+                                    </path>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="product-box-item">
+                            <p class=" product-box-brand product-box-ram product-title-font product-box-brand-loading">
+                                Mobile Ram : <span class="product-caption-font product-box-brand-span ">12
+                                    GB</span>
+                            </p>
+                        </div>
+
+                        <div class="product-box-item">
+                            <p class=" product-box-brand product-box-memory product-title-font
+                                product-box-brand-loading">
+                                Mobile Memory : <span class="product-caption-font product-box-brand-span ">512 GB</span>
+                            </p>
+                        </div>
+                        <div class="product-box-item">
+                            <p
+                                class=" product-box-brand product-box-camera product-title-font product-box-brand-loading">
+                                Mobile Camera : <span class="product-caption-font product-box-brand-span ">120 mega
+                                    px</span>
+                            </p>
+                        </div>
+                        <div class="product-box-item">
+                            <p
+                                class=" product-box-brand product-box-coloring product-title-font product-box-brand-loading">
+                                Mobile Coloring : <span class="product-caption-font product-box-brand-span ">120 mega
+                                    px</span>
+                            </p>
+                        </div>
+
+                        <div class="product-box-item">
+                            <p class="product-box-brand product-box-qty product-title-font product-box-brand-loading">
+                                Mobile qty : <span class="product-caption-font product-box-brand-span">10</span>
+                            </p>
+                        </div>
+
+                        <div class="product-box-bottom">
+                            <p
+                                class="product-box-brand product-box-category product-title-font product-box-brand-loading-bottom product-box-brand-loading">
+                                Category :
+                                <span class="product-caption-font product-box-brand-span">Important</span>
+                            </p>
+                            <p
+                                class=" product-box-brand product-box-price product-title-font product-box-brand-loading-bottom product-box-brand-loading">
+                                Price : <span class="product-caption-font product-box-brand-span">$10</span></p>
+                        </div>
+                        <btn class="product-box-delete product-box-brand-loading-trash product-box-brand-loading">
+                            <svg class="size-6 product-box-delete-svg" style="display: none;"
+                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="m14.74 9-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 0 1-2.244 2.077H8.084a2.25 2.25 0 0 1-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 0 0-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 0 1 3.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 0 0-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 0 0-7.5 0" />
+                            </svg>
+                        </btn>
+                    </div>
+                    <div class="product-box" id="product-box-products">
+                        <div class="product-box-img product-box-img-loading"></div>
+                        <div class="product-box-top">
+                            <p class="product-box-brand product-title-font product-box-brand-loading">Mobile Brand :
+                                <span class="product-caption-font product-box-brand-span">samsung</span>
+                            </p>
+                            <div class="product-box-edit-btn">
+                                <svg class="size-6 edit-btn-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                    fill="currentColor">
+                                    <path
+                                        d="M21.731 2.269a2.625 2.625 0 0 0-3.712 0l-1.157 1.157 3.712 3.712 1.157-1.157a2.625 2.625 0 0 0 0-3.712ZM19.513 8.199l-3.712-3.712-12.15 12.15a5.25 5.25 0 0 0-1.32 2.214l-.8 2.685a.75.75 0 0 0 .933.933l2.685-.8a5.25 5.25 0 0 0 2.214-1.32L19.513 8.2Z">
+                                    </path>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="product-box-item">
+                            <p class=" product-box-brand product-box-ram product-title-font product-box-brand-loading">
+                                Mobile Ram : <span class="product-caption-font product-box-brand-span ">12
+                                    GB</span>
+                            </p>
+                        </div>
+
+                        <div class="product-box-item">
+                            <p class=" product-box-brand product-box-memory product-title-font
+                                product-box-brand-loading">
+                                Mobile Memory : <span class="product-caption-font product-box-brand-span ">512 GB</span>
+                            </p>
+                        </div>
+                        <div class="product-box-item">
+                            <p
+                                class=" product-box-brand product-box-camera product-title-font product-box-brand-loading">
+                                Mobile Camera : <span class="product-caption-font product-box-brand-span ">120 mega
+                                    px</span>
+                            </p>
+                        </div>
+                        <div class="product-box-item">
+                            <p
+                                class=" product-box-brand product-box-coloring product-title-font product-box-brand-loading">
+                                Mobile Coloring : <span class="product-caption-font product-box-brand-span ">120 mega
+                                    px</span>
+                            </p>
+                        </div>
+
+                        <div class="product-box-item">
+                            <p class="product-box-brand product-box-qty product-title-font product-box-brand-loading">
+                                Mobile qty : <span class="product-caption-font product-box-brand-span">10</span>
+                            </p>
+                        </div>
+
+                        <div class="product-box-bottom">
+                            <p
+                                class="product-box-brand product-box-category product-title-font product-box-brand-loading-bottom product-box-brand-loading">
+                                Category :
+                                <span class="product-caption-font product-box-brand-span">Important</span>
+                            </p>
+                            <p
+                                class=" product-box-brand product-box-price product-title-font product-box-brand-loading-bottom product-box-brand-loading">
+                                Price : <span class="product-caption-font product-box-brand-span">$10</span></p>
+                        </div>
+                        <btn class="product-box-delete product-box-brand-loading-trash product-box-brand-loading">
+                            <svg class="size-6 product-box-delete-svg" style="display: none;"
+                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="m14.74 9-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 0 1-2.244 2.077H8.084a2.25 2.25 0 0 1-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 0 0-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 0 1 3.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 0 0-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 0 0-7.5 0" />
+                            </svg>
+                        </btn>
+                    </div>
+                </div>
+                <p class="avalableOrNoTxt hidden">No Products Available</p>
+                <div class="pagination-products-container" id="pagination-products">
+                    <!-- Use page-active class for active page -->
+                    <!-- <button class="pagination-product-btn">3</button>
+                    <button class="pagination-product-btn">2</button>
+                    <button class="pagination-product-btn page-active">1</button> -->
+                </div>
+                <div class="filter-box">
+                    <button class="filter-btn filter-product-btn">
+                        <svg class="size-6 filter-btn-svg" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M12 3c2.755 0 5.455.232 8.083.678.533.09.917.556.917 1.096v1.044a2.25 2.25 0 0 1-.659 1.591l-5.432 5.432a2.25 2.25 0 0 0-.659 1.591v2.927a2.25 2.25 0 0 1-1.244 2.013L9.75 21v-6.568a2.25 2.25 0 0 0-.659-1.591L3.659 7.409A2.25 2.25 0 0 1 3 5.818V4.774c0-.54.384-1.006.917-1.096A48.32 48.32 0 0 1 12 3Z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <!-- Message Box -->
+    <div class="messageParent">
+        <div class="message-container ">
+            <div class="message-container-top">
+                <p class="message-container-title">Messages</p>
+                <svg class="size-6 message-container-top-svg" xmlns="http://www.w3.org/2000/svg" fill="none"
+                    viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                </svg>
+            </div>
+            <div class="box-message"></div>
+            <!-- <div class="messeage-box">
+                <svg class="size-6 messeage-box-svg" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                    stroke-width="1.5" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+                </svg>
+                <p class="message-title">Productsdsds Of Samsung Is Done.</p>
+            </div> -->
+        </div>
+    </div>
+
+
+    <!-- Panel User -->
+    <!--class panel-open for activat panel -->
+    <div class="panel ">
+        <!--class panel-active for activat panel item-->
+        <!--class panel-active--icon for activat panel item-->
+        <div class="dashboard-box panel-item panel-active" id="panel-item-dashboard">
+            <svg id="panel-item-dashboard-svg" class="size-6 dashboard-box__icon panel-active--icon"
+                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                    d="M11.47 3.841a.75.75 0 0 1 1.06 0l8.69 8.69a.75.75 0 1 0 1.06-1.061l-8.689-8.69a2.25 2.25 0 0 0-3.182 0l-8.69 8.69a.75.75 0 1 0 1.061 1.06l8.69-8.689Z" />
+                <path
+                    d="m12 5.432 8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 0 1-.75-.75v-4.5a.75.75 0 0 0-.75-.75h-3a.75.75 0 0 0-.75.75V21a.75.75 0 0 1-.75.75H5.625a1.875 1.875 0 0 1-1.875-1.875v-6.198a2.29 2.29 0 0 0 .091-.086L12 5.432Z" />
+            </svg>
+            Dashboard
+        </div>
+        <div class="user-box panel-item " id="panel-item-profile">
+            <svg id="panel-item-profile-svg" class="size-6 user-box__icon " xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24" fill="currentColor">
+                <path fill-rule="evenodd"
+                    d="M7.5 6a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM3.751 20.105a8.25 8.25 0 0 1 16.498 0 .75.75 0 0 1-.437.695A18.683 18.683 0 0 1 12 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 0 1-.437-.695Z"
+                    clip-rule="evenodd" />
+            </svg>
+            Profile
+        </div>
+        <div class="products-box panel-item" id="panel-item-porducts">
+            <svg id="panel-item-porducts-svg" class="size-6 products-box__icon" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24" fill="currentColor">
+                <path
+                    d="M19.5 21a3 3 0 0 0 3-3v-4.5a3 3 0 0 0-3-3h-15a3 3 0 0 0-3 3V18a3 3 0 0 0 3 3h15ZM1.5 10.146V6a3 3 0 0 1 3-3h5.379a2.25 2.25 0 0 1 1.59.659l2.122 2.121c.14.141.331.22.53.22H19.5a3 3 0 0 1 3 3v1.146A4.483 4.483 0 0 0 19.5 9h-15a4.483 4.483 0 0 0-3 1.146Z" />
+            </svg>
+
+            Porducts
+        </div>
+        <div class="message-box panel-item" id="panel-item-messages">
+            <svg id="panel-item-messages-svg" class="message-box__icon" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24" fill="currentColor">
+                <path fill-rule="evenodd"
+                    d="M5.25 9a6.75 6.75 0 0 1 13.5 0v.75c0 2.123.8 4.057 2.118 5.52a.75.75 0 0 1-.297 1.206c-1.544.57-3.16.99-4.831 1.243a3.75 3.75 0 1 1-7.48 0 24.585 24.585 0 0 1-4.831-1.244.75.75 0 0 1-.298-1.205A8.217 8.217 0 0 0 5.25 9.75V9Zm4.502 8.9a2.25 2.25 0 1 0 4.496 0 25.057 25.057 0 0 1-4.496 0Z"
+                    clip-rule="evenodd" />
+            </svg>
+            Messages
+        </div>
+        <div class="theme-box panel-item" id="panel-item-theme">
+            <div class="theme-svg-box">
+                <svg id="panel-item-theme-svg" class="size-6 theme-box__icon" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24" fill="currentColor">
+                    <path fill-rule="evenodd"
+                        d="M9.528 1.718a.75.75 0 0 1 .162.819A8.97 8.97 0 0 0 9 6a9 9 0 0 0 9 9 8.97 8.97 0 0 0 3.463-.69.75.75 0 0 1 .981.98 10.503 10.503 0 0 1-9.694 6.46c-5.799 0-10.5-4.7-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 0 1 .818.162Z"
+                        clip-rule="evenodd" />
+                </svg>
+            </div>
+            Theme
+        </div>
+        <div class="logout-box panel-item" id="panel-item-logout">
+            <svg id="panel-item-logout-svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" class="theme-box__icon lucide lucide-log-out-icon lucide-log-out">
+                <path d="m16 17 5-5-5-5" />
+                <path d="M21 12H9" />
+                <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
+            </svg>
+            Logout
+        </div>
+    </div>
+
+</body>
+<script src="app.js"></script>
+<script src="app2.js"></script>
+
+</html>

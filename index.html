@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<!-- Use Dark-theme -->
+<html lang="en" class="">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width,
+               initial-scale=1.0,
+               maximum-scale=1.0,
+               minimum-scale=1.0,
+               user-scalable=no">
+    <title>Sign In</title>
+    <link rel="stylesheet" href="Login Form/style.css">
+</head>
+
+<body>
+    <div class="loader ">
+        <div class="justify-content-center jimu-primary-loading"></div>
+    </div>
+    <div class="container">
+        <div class="left-side">
+            <div class="login-box">
+                <p class="login-title">Sign In</p>
+                <p class="login-caption">Enter your email and password to sign in!</p>
+                <button class="login-google">
+                    <img class="login-google__img" src="Login Form/Images/Google__G__Logo 1.svg" alt="Google">
+                    Sign in with Google
+                </button>
+                <br>
+                <img class="login-border" src="Login Form/Images/Separator.svg" alt="Separator">
+                <p class="login-email-title">Email*</p>
+                <input type="email" class="login-email-inp" placeholder="mail@simmmple.com">
+                <p class="login-password-title">Password*</p>
+                <div class="password-box">
+                    <input type="password" id="login-password-input" class="login-password-inp"
+                        placeholder="Min. 8 characters">
+                    <!-- use
+                        <svg id="login-password-eye" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye-slash login-password-eye" viewBox="0 0 16 16">
+                            <path d="M13.359 11.238C15.06 9.72 16 8 16 8s-3-5.5-8-5.5a7 7 0 0 0-2.79.588l.77.771A6 6 0 0 1 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755q-.247.248-.517.486z"/>
+                            <path d="M11.297 9.176a3.5 3.5 0 0 0-4.474-4.474l.823.823a2.5 2.5 0 0 1 2.829 2.829zm-2.943 1.299.822.822a3.5 3.5 0 0 1-4.474-4.474l.823.823a2.5 2.5 0 0 0 2.829 2.829"/>
+                            <path d="M3.35 5.47q-.27.24-.518.487A13 13 0 0 0 1.172 8l.195.288c.335.48.83 1.12 1.465 1.755C4.121 11.332 5.881 12.5 8 12.5c.716 0 1.39-.133 2.02-.36l.77.772A7 7 0 0 1 8 13.5C3 13.5 0 8 0 8s.939-1.721 2.641-3.238l.708.709zm10.296 8.884-12-12 .708-.708 12 12z"/>
+                        </svg> 
+                        to close eye
+                    -->
+                    <div class="password-eye-box">
+                        <svg id="login-password-eye" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                            fill="currentColor" class="bi bi-eye login-password-eye" viewBox="0 0 16 16">
+                            <path
+                                d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z" />
+                            <path
+                                d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0" />
+                        </svg>
+                    </div>
+                </div>
+                <br>
+                <!-- class checked for remember me -->
+                <button class="login-remember__btn ">
+                    <img class="remember-img" src="Login Form/Images/tik.svg" alt="">
+                </button>
+                <span class="login-remember__text">Keep me logged in</span>
+                <a class="login-remember__link" href="#">Forget password?</a>
+                <button class="login-btn">Sign In</button>
+                <p class="login-create__account">
+                    Not registered yet?
+                    <a class="create-account__link" href="#">Create an Account</a>
+                </p>
+            </div>
+            <p class="login-footer">© 2022 Horizon UI. All Rights Reserved. Made with love by Simmmple!</p>
+        </div>
+
+
+
+        <div class="right-side">
+            <img class="right-side__bg" src="Login Form/Images/Background 5.4.svg" alt="Background">
+            <div class="right-box">
+                <img class="right-logo" src="Login Form/Images/logo.svg" alt="Vector">
+                <p class="right-title">Horizon</p>
+                <div class="right-box__info">horizon-ui.com</div>
+            </div>
+            <div class="right-bottom__box">
+                <div class="footer-box">
+                    <span class="footer-item">Marketplace</span>
+                    <span class="footer-item">License</span>
+                    <span class="footer-item">Terms of Use</span>
+                    <span class="footer-item">Blog</span>
+                </div>
+                <button class="theme-btn">
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Use toast-open for show toast box -->
+    <div class="toast-container ">
+        <!-- Use This Svg For Valid Value -->
+        <!-- <svg class="size-6 toast-valid-svg" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+        </svg> -->
+        <!-- Use This Svg For InValid Value -->
+        <!-- <svg class="size-6 toast-invalid-svg" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+            stroke-width="1.5" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round"
+                d="M12 9v3.75m9-.75a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 3.75h.008v.008H12v-.008Z" />
+        </svg> -->
+        <div class="toast-box">
+            <p class="toast-title">The requested user was not found.</p>
+            <div class="toast-svg-box">
+                <svg class="size-6 toast-invalid-svg" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                    stroke-width="1.5" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M12 9v3.75m9-.75a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 3.75h.008v.008H12v-.008Z" />
+                </svg>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="Login Form/app.js"></script>
+
+</html>

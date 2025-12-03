@@ -1,0 +1,1079 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+/* 
+===========================
+---------- Loading --------
+=========================== 
+*/
+
+
+.loader {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    position: fixed;
+    z-index: 20000000;
+}
+
+.jimu-primary-loading:before,
+.jimu-primary-loading:after {
+    position: absolute;
+    top: 0;
+    content: '';
+}
+
+.jimu-primary-loading:before {
+    left: -19.992px;
+}
+
+.jimu-primary-loading:after {
+    left: 19.992px;
+    -webkit-animation-delay: 0.32s !important;
+    animation-delay: 0.32s !important;
+}
+
+.jimu-primary-loading:before,
+.jimu-primary-loading:after,
+.jimu-primary-loading {
+    background: #076fe5;
+    -webkit-animation: loading-keys-app-loading 0.8s infinite ease-in-out;
+    animation: loading-keys-app-loading 0.8s infinite ease-in-out;
+    width: 13.6px;
+    height: 32px;
+}
+
+.jimu-primary-loading {
+    text-indent: -9999em;
+    margin: auto;
+    position: absolute;
+    right: calc(50% - 6.8px);
+    top: calc(50% - 16px);
+    -webkit-animation-delay: 0.16s !important;
+    animation-delay: 0.16s !important;
+}
+
+@-webkit-keyframes loading-keys-app-loading {
+
+    0%,
+    80%,
+    100% {
+        opacity: .75;
+        box-shadow: 0 0 #076fe5;
+        height: 32px;
+    }
+
+    40% {
+        opacity: 1;
+        box-shadow: 0 -8px #076fe5;
+        height: 40px;
+    }
+}
+
+@keyframes loading-keys-app-loading {
+
+    0%,
+    80%,
+    100% {
+        opacity: .75;
+        box-shadow: 0 0 #076fe5;
+        height: 32px;
+    }
+
+    40% {
+        opacity: 1;
+        box-shadow: 0 -8px #076fe5;
+        height: 40px;
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+
+
+/* 
+===========================
+---------- Html -----------
+=========================== 
+*/
+
+@font-face {
+    font-family: "DMSansItalic";
+    src: url(./Fonts/DMSans-Italic-VariableFont_opsz\,wght.ttf) format(truetype);
+}
+
+@font-face {
+    font-family: "DMSansVariable";
+    src: url(./Fonts/DMSans-VariableFont_opsz\,wght.ttf) format(truetype);
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    /* 10 px */
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+body {
+    line-height: 1.6rem;
+    font-size: 1.6rem;
+}
+
+html,
+body {
+    touch-action: manipulation;
+    /* برای جلوگیری از double-tap zoom */
+}
+
+input,
+textarea,
+select {
+    font-size: 16px !important;
+    /* کمتر از 16px نباشه */
+}
+
+button {
+    -webkit-tap-highlight-color: transparent;
+    /* برای موبایل */
+    outline: none;
+}
+
+.nav-theme {
+    width: 2.5rem;
+    color: #fff;
+    cursor: pointer;
+    transition: all 100ms ease-in;
+}
+
+.Dark-theme {
+    body {
+        background-color: #1a1d23;
+    }
+
+    .login-title {
+        color: #f2f2f2;
+    }
+
+    .login-caption {
+        color: #9aa0a6;
+    }
+
+    .login-email-inp {
+        background-color: #22272e;
+        border: 1px #2a2f36 solid;
+    }
+
+    .login-email-inp::placeholder {
+        color: #e6e6e6;
+    }
+
+    .login-password-inp {
+        background-color: #22272e;
+        border: 1px #2a2f36 solid;
+    }
+
+    .login-password-inp::placeholder {
+        color: #e6e6e6;
+    }
+
+    .password-box {
+        background-color: #1a1d23;
+    }
+
+    .login-remember__text {
+        color: #9aa0a6;
+    }
+
+    .login-remember__link {
+        color: #ffffff;
+    }
+
+    .login-email-title {
+        color: #9aa0a6;
+    }
+
+    .login-password-title {
+        color: #9aa0a6;
+    }
+
+    .login-btn {
+        background-color: #3f51b5;
+        color: #e6e6e6;
+        transition: all 150ms ease;
+    }
+
+    .login-btn:hover {
+        background-color: #5567cd;
+        color: #e6e6e6;
+    }
+
+    .login-create__account {
+        color: #9aa0a6;
+    }
+
+    .create-account__link {
+        color: #f2f2f2;
+        font-weight: 200;
+    }
+
+    .login-google {
+        background-color: #222c3b;
+        color: #e6e6e6;
+        transition: all 150ms ease;
+    }
+
+    .login-google:hover {
+        background-color: #424e61;
+    }
+
+    .right-title {
+        color: #e6e6e6;
+    }
+
+    .right-box__info {
+        color: #e6e6e6;
+    }
+
+    .login-footer {
+        color: #9aa0a6;
+    }
+
+    .footer-item {
+        color: #f2f2f2;
+    }
+}
+
+/* 
+===========================
+--------- Left Box --------
+=========================== 
+*/
+
+.container {
+    width: 100%;
+    height: 100%;
+    margin-inline: auto;
+    display: flex;
+    overflow: hidden;
+}
+
+.left-side {
+    width: 50%;
+    height: 100%;
+}
+
+.login-box {
+    width: 41rem;
+    height: 71rem;
+    padding-top: 10rem;
+    margin-left: 30rem;
+}
+
+.login-title {
+    font-family: "DMSansVariable";
+    font-weight: 700;
+    color: #2B3674;
+    padding-top: 2rem;
+    margin-bottom: 2.5rem;
+    font-size: 3.6rem;
+    font-style: bold;
+}
+
+.login-caption {
+    font-family: "DMSansVariable";
+    font-weight: 400;
+    color: #A3AED0;
+    font-size: 1.6rem;
+    font-style: Regular;
+    line-height: 100%;
+    margin-bottom: 3.5rem;
+}
+
+.login-google {
+    width: 41rem;
+    height: 5rem;
+    background-color: #F4F7FE;
+    font-family: "DMSansVariable";
+    font-weight: 500;
+    color: #2B3674;
+    border: none;
+    outline: none;
+    border-radius: 1.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    margin-bottom: 1.5rem;
+    cursor: pointer;
+    transition: all 150ms ease;
+}
+
+.login-google:hover {
+    background-color: #e5e1e1a4;
+}
+
+.login-google__img {
+    width: 2rem;
+}
+
+.login-border {
+    margin-bottom: 1.5rem;
+}
+
+.login-email-title {
+    font-family: "DMSansVariable";
+    font-weight: 500;
+    color: #2B3674;
+    font-size: 1.4rem;
+    font-style: Medium;
+    margin-bottom: .8rem;
+}
+
+.login-email-inp {
+    width: 41rem;
+    height: 5rem;
+    border-radius: 1.6rem;
+    outline: none;
+    border: 1px solid #E0E5F2;
+    font-family: "DMSansVariable";
+    font-weight: 400;
+    color: #A3AED0;
+    font-size: 1.4rem;
+    font-style: Regular;
+    padding-left: 2.4rem;
+    margin-bottom: 2rem;
+}
+
+.login-password-title {
+    font-family: "DMSansVariable";
+    font-weight: 500;
+    color: #2B3674;
+    font-size: 1.4rem;
+    font-style: Medium;
+    margin-bottom: .8rem;
+}
+
+.login-password-inp {
+    width: 41rem;
+    height: 5rem;
+    border-radius: 1.6rem;
+    outline: none;
+    border: 1px solid #E0E5F2;
+    font-family: "DMSansVariable";
+    font-weight: 400;
+    color: #A3AED0;
+    font-size: 1.4rem;
+    font-style: Regular;
+    padding-left: 2.4rem;
+}
+
+.password-box {
+    width: 41rem;
+    height: 5rem;
+    position: relative;
+    background-color: #fff;
+}
+
+.login-password-eye {
+    position: absolute;
+    right: 2rem;
+    top: 1.5rem;
+    cursor: pointer;
+    color: #707EAE;
+}
+
+.login-remember__btn {
+    margin-top: 1.5rem;
+    width: 1.8rem;
+    height: 1.8rem;
+    border-radius: 2px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin-right: .5rem;
+    transition: all 80ms ease-in;
+}
+
+.checked {
+    background-color: #4318FF;
+    position: relative;
+}
+
+.remember-img {
+    display: block;
+    width: 1rem;
+    position: absolute;
+    top: .5rem;
+    right: .4rem;
+}
+
+.login-remember__text {
+    font-family: "DMSansVariable";
+    font-weight: 400;
+    color: #2B3674;
+    font-size: 1.4rem;
+    font-style: Regular;
+}
+
+.login-remember__link {
+    text-decoration: none;
+    font-family: "DMSansVariable";
+    font-weight: 500;
+    color: #4318FF;
+    font-size: 1.4rem;
+    font-style: Medium;
+}
+
+.login-btn {
+    width: 41rem;
+    height: 5.4rem;
+    border-radius: 1.6rem;
+    border: none;
+    outline: none;
+    background-color: #4318FF;
+    font-family: "DMSansVariable";
+    font-weight: 700;
+    color: #FFFFFF;
+    font-size: 1.4rem;
+    font-style: Bold;
+    margin-top: 2.5rem;
+    cursor: pointer;
+    transition: all 150ms ease;
+}
+
+.login-btn:hover {
+    background-color: rgba(81, 52, 209, 0.77);
+}
+
+.login-create__account {
+    font-family: "DMSansVariable";
+    font-weight: 400;
+    color: #707EAE;
+    font-size: 1.4rem;
+    font-style: Regular;
+    margin-top: 3.5rem;
+}
+
+.create-account__link {
+    font-family: "DMSansVariable";
+    font-weight: 700;
+    color: #4318FF;
+    font-size: 1.4rem;
+    font-style: Bold;
+}
+
+.login-footer {
+    margin-top: 18rem;
+    text-align: center;
+}
+
+
+
+/* 
+===========================
+--------- Right Box -------
+=========================== 
+*/
+
+
+
+
+.right-side {
+    width: 50%;
+    height: 100%;
+    position: relative;
+}
+
+.right-side__bg {
+    width: 100%;
+    height: 95rem;
+    border-bottom-left-radius: 22rem;
+    object-fit: cover;
+}
+
+.right-box {
+    width: 47rem;
+    height: 50rem;
+    position: absolute;
+    top: 15rem;
+    right: 23rem;
+    text-align: center;
+}
+
+.right-logo {
+    width: 35rem;
+}
+
+.right-title {
+    font-family: "DMSansVariable";
+    font-weight: 700;
+    color: #fff;
+    font-size: 4.4rem;
+    font-style: Bold;
+    text-align: center;
+    margin-top: 4rem;
+    margin-bottom: 11rem;
+}
+
+.right-box__info {
+    width: 47rem;
+    height: 13.4rem;
+    border-radius: 2.6rem;
+    border: 2.2px solid #FFFFFF33;
+    font-family: "DMSansVariable";
+    font-weight: 700;
+    color: #fff;
+    font-size: 2.9rem;
+    font-style: Bold;
+    padding-top: 5.5rem;
+}
+
+.right-bottom__box {
+    width: 65rem;
+    position: absolute;
+    bottom: 4rem;
+    right: 3rem;
+    display: flex;
+    align-items: center;
+    gap: 19rem;
+}
+
+.footer-box {
+    width: 60%;
+    display: flex;
+    gap: 4rem;
+}
+
+.footer-item {
+    font-family: "DMSansVariable";
+    font-weight: 500;
+    color: #FFFFFF;
+    font-size: 1.4rem;
+    font-style: Medium;
+    cursor: pointer;
+    transition: all 150ms ease;
+}
+
+.footer-item:hover {
+    color: #ffffff94;
+}
+
+.theme-btn {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 3rem;
+    border: 1px solid #6A53FF;
+    background: linear-gradient(110deg, #868CFF, #4318FF);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.toast-container {
+    margin-top: -110rem;
+    opacity: 0;
+    transition: all 160ms ease;
+}
+
+.toast-open {
+    margin-top: -90rem;
+    opacity: 1;
+}
+
+.toast-box {
+    width: 45rem;
+    height: 7rem;
+    line-height: 2.2rem;
+    background-color: #FFFFFF;
+    display: flex;
+    border-radius: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    color: #2B3674;
+    margin-inline: auto;
+    position: relative;
+    z-index: 200;
+    padding: 0 2rem 0 2rem;
+    box-shadow: -1px -1px 22px -8px rgba(0, 0, 0, 1);
+    -webkit-box-shadow: -1px -1px 22px -8px rgba(0, 0, 0, 1);
+    -moz-box-shadow: -1px -1px 22px -8px rgba(0, 0, 0, 1);
+}
+
+.toast-title {
+    font-family: "DMSansVariable";
+    font-weight: 500;
+    font-size: 1.8rem;
+    font-style: Medium;
+}
+
+.toast-invalid-svg {
+    width: 3rem;
+    color: #21f700;
+}
+
+.toast-valid-svg {
+    width: 3rem;
+    color: green;
+}
+
+
+/* 
+===========================
+-------- Responsive -------
+=========================== 
+*/
+
+
+@media screen and (max-width: 1600px) {
+    .right-bottom__box {
+        gap: 10rem;
+        right: -2rem;
+    }
+
+    .right-box {
+        right: 17rem;
+    }
+
+    .login-box {
+        margin-left: 20rem;
+    }
+}
+
+@media screen and (max-width: 1500px) {
+    .right-bottom__box {
+        gap: 3rem;
+        right: -12rem;
+    }
+
+    .right-box {
+        right: 14rem;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .right-bottom__box {
+        gap: 0;
+        right: -17rem;
+    }
+
+    .right-box {
+        right: 10rem;
+    }
+
+    .login-box {
+        margin-left: 15rem;
+    }
+
+    .right-box__info {
+        width: 37rem;
+        height: 10.4rem;
+        padding-top: 4rem;
+        margin-left: 5rem;
+    }
+
+    .right-logo {
+        width: 20rem;
+    }
+
+    .right-title {
+        font-size: 3.5rem;
+    }
+
+    .right-side__bg {
+        height: 90rem;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .footer-box {
+        display: none;
+    }
+
+    .right-box {
+        right: 5rem;
+    }
+
+    .theme-btn {
+        margin-left: 33rem;
+    }
+
+    .right-box__info {
+        width: 30rem;
+        height: 8.4rem;
+        padding-top: 3.3rem;
+        margin-left: 9rem;
+        font-size: 2.5rem;
+    }
+
+    .login-box {
+        margin-left: 5rem;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .container {
+        flex-direction: column-reverse;
+    }
+
+    .right-side {
+        width: 100%;
+    }
+
+    .left-side {
+        width: 100%;
+    }
+
+    .right-side__bg {
+        height: 20rem;
+        border-bottom-left-radius: 5rem;
+        border-bottom-right-radius: 5rem;
+    }
+
+    .right-box {
+        right: 25rem;
+        top: 5rem;
+        height: auto;
+    }
+
+    .right-title {
+        margin-bottom: 5rem;
+    }
+
+    .theme-btn {
+        margin-bottom: 3rem;
+    }
+
+    .login-box {
+        margin-inline: auto;
+        padding-top: 5rem;
+    }
+
+    .right-logo {
+        display: none;
+    }
+
+    .right-box__info {
+        display: none;
+    }
+
+    .login-footer {
+        margin-top: 0rem;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .right-title {
+        position: absolute;
+        left: 0;
+    }
+
+    .right-box {
+        width: 23rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .theme-btn {
+        position: absolute;
+        left: 5rem;
+        bottom: -.2rem;
+    }
+
+    .login-title {
+        font-size: 3rem;
+    }
+
+    .login-caption {
+        font-size: 1.3rem;
+    }
+
+    .login-google {
+        width: 30rem;
+        height: 4rem;
+    }
+
+    .login-border {
+        width: 30rem;
+    }
+
+    .login-email-title {
+        font-size: 1.2rem;
+    }
+
+    .login-email-inp {
+        width: 30rem;
+        height: 4rem;
+    }
+
+    .login-password-title {
+        font-size: 1.2rem;
+    }
+
+    .login-password-inp {
+        width: 30rem;
+        height: 4rem;
+    }
+
+    .login-password-eye {
+        right: 13rem;
+        top: 1.2rem;
+    }
+
+    .login-remember__text {
+        font-size: 1.3rem;
+    }
+
+    .login-remember__link {
+        font-size: 1.3rem;
+    }
+
+    .login-btn {
+        width: 30rem;
+        height: 4rem;
+        font-size: 1.2rem;
+    }
+
+    .login-create__account {
+        font-size: 1.3rem;
+    }
+
+    .create-account__link {
+        font-size: 1.3rem;
+    }
+
+    .login-footer {
+        font-size: 1.2rem;
+    }
+
+    .login-box {
+        width: 30rem;
+        top: 0;
+    }
+
+    .right-title {
+        font-size: 2.5rem;
+        margin-top: 2rem;
+        top: 0;
+    }
+
+    .right-side__bg {
+        height: 15rem;
+    }
+
+    .theme-btn {
+        top: -6rem;
+        width: 5rem;
+        height: 5rem;
+    }
+
+    .right-box {
+        height: 10rem;
+        left: 8rem;
+    }
+
+    .toast-box {
+        margin-top: 7rem;
+    }
+
+}
+
+@media screen and (max-width:450px) {
+    .container {
+        width: 100%;
+        /* margin-inline: auto; */
+    }
+
+    .login-footer {
+        width: 80%;
+        margin-inline: auto;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .password-box {
+        width: 30rem;
+    }
+
+    .login-password-eye {
+        right: 02rem;
+    }
+
+    .right-bottom__box {
+        width: 50%;
+        right: 8rem;
+        height: 10rem;
+
+    }
+
+    .theme-btn {
+        margin: 0;
+        padding: 0;
+        right: 0;
+        left: 15rem;
+        top: 4rem;
+    }
+
+    .footer-box {
+        display: none;
+    }
+
+    .right-box__info {
+        display: none;
+    }
+
+    .right-logo {
+        display: none;
+    }
+
+    .toast-box {
+        width: 80%;
+        margin-top: 0rem;
+    }
+}
